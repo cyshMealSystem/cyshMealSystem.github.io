@@ -29,8 +29,7 @@ function confirm(){
             document.getElementById("IDnumber").value="";
         }
         else if(IDnumber[0]>'Z'){
-            IDnumber[0] -= 'a';
-            IDnumber[0] += 'A';
+            IDnumber=IDnumber.toUpperCase();
             Send(name, IDnumber);
         }
         else{
@@ -40,7 +39,7 @@ function confirm(){
 }
 
 function Send(name, IDnumber){
-    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec",""];
+    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec","https://script.google.com/macros/s/AKfycbxZ0BOpexJgOoS4Ki3wARpi10pyR9EWgUDuLGdkvw/exec"];
     $.ajax({
         type:'get',
         cache: false,
@@ -54,15 +53,18 @@ function Send(name, IDnumber){
         success: function(respond){
             if(respond=="fail"){
                 alert("您的資料不存在於資料庫\n請先註冊帳戶後再登入");
-                location.href="/register.html";
+                //location.href="/register.html";
             }
             else{
                 profile= respond.split(",");
-                location.href="/";
+                console.log(profile);
+                //location.href="/";
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
-                send++;
+            send++;
+            confirm();
+            alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
 }
