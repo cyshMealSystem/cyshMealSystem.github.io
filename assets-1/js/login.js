@@ -53,12 +53,12 @@ function Send(name, IDnumber){
         success: function(respond){
             if(respond=="fail"){
                 alert("您的資料不存在於資料庫\n請先註冊帳戶後再登入");
-                //location.href="/register.html";
+                location.href="/register.html";
             }
             else{
                 profile= respond.split(",");
                 console.log(profile);
-                //location.href="/";
+                location.href="/";
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
