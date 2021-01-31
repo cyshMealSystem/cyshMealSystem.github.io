@@ -123,11 +123,13 @@ var profile=[];
 
 })(jQuery);
 
+var newPage;
 function login(){
-    var newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
-    
+    newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
 }
-window.addEventListener('message', function(e){
-        console.log("sdgfchvjbknl");
-        window.close();
-    }, false);
+
+function close(v){
+    newPage.close();
+    var data= v.split(",");
+    console.log("gchvjbknl");
+}

@@ -56,10 +56,7 @@ function Send(name, IDnumber){
             }
             else{
                 alert("登入成功");
-                var domain= window.location.origin;
-                alert(domain);
-                window.parent.postMessage(respond, domain);   
-                window.parent.focus();
+                window.opener.document.getElementById("activityId").value= respond;
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
