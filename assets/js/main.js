@@ -3,7 +3,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-var profile=[];
 
 (function($) {
 
@@ -120,16 +119,17 @@ var profile=[];
 					target: $body,
 					visibleClass: 'header-visible'
 				});
-
 })(jQuery);
 
-var newPage;
 function login(){
-    newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
-}
-
-function close(v){
-    newPage.close();
-    var data= v.split(",");
-    console.log("gchvjbknl");
+    var newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
+    var execution= window.setInterval(function(){
+        if(document.getElementById("activityId").value!=""){
+            var profile= document.getElementById("activityId").value;
+            profile= profile.split(",");
+            console.log(profile);
+            window.clearTimeout(execution);
+            newPage.close();
+        }
+    },1000);
 }
