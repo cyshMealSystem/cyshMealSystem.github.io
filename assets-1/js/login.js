@@ -1,5 +1,4 @@
 var send=0;
-var profile="";
 function register(){
     location.href= "/register.html";
 }
@@ -14,7 +13,7 @@ function check(status){
 }
 
 function confirm(){
-    var name= document.getElementById("name").value;
+    var name= document.getElementById("Number").value;
     var IDnumber= document.getElementById("IDnumber").value;
     
     if(name=="" ){
@@ -56,9 +55,11 @@ function Send(name, IDnumber){
                 location.href="/register.html";
             }
             else{
-                profile= respond.split(",");
-                console.log(profile);
-                location.href="/";
+                alert("登入成功");
+                var domain= window.location.origin;
+                alert(domain);
+                window.parent.postMessage(respond, domain);   
+                window.parent.focus();
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){

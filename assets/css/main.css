@@ -2631,3 +2631,27 @@ input, select, textarea {
 				}
 
 	}
+
+
+        .actions{
+            text-align: center;
+            margin: 1em 0 0.5em 0;
+            width: inherit;
+        }
+
+#register{
+    margin: 0 0.75em 0 0;
+    background-color: #222729;
+    border-color: aliceblue;
+    border-width: thick;
+}
+
+#confirm{
+    background-color: #222729;
+    border-color: aliceblue;
+    border-width: thick;
+}
+
+#nav{
+    margin: 0 0 2em 0;
+}

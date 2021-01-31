@@ -3,6 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+var profile=[];
 
 (function($) {
 
@@ -121,3 +122,12 @@
 				});
 
 })(jQuery);
+
+function login(){
+    var newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
+    
+}
+window.addEventListener('message', function(e){
+        console.log("sdgfchvjbknl");
+        window.close();
+    }, false);
