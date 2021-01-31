@@ -126,10 +126,16 @@ function login(){
     var execution= window.setInterval(function(){
         if(document.getElementById("activityId").value!=""){
             var profile= document.getElementById("activityId").value;
-            profile= profile.split(",");
-            console.log(profile);
             window.clearTimeout(execution);
             newPage.close();
+            afterLogin(profile);
         }
     },1000);
+}
+
+function afterLogin(profile){
+    profile= profile.split(",");
+    document.getElementById("title").textContent= profile[2];
+    var str= profile[0][0] + " 年 " + profile[0][1] + profile[0][2] + " 班　" + profile[1] + " 號";
+    document.getElementById("detail").textContent= str;
 }
