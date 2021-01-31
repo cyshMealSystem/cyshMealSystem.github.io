@@ -65,4 +65,4 @@ function Send(name, IDnumber){
             alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
-}
+}   

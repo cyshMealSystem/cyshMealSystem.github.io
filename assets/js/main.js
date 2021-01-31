@@ -138,4 +138,6 @@ function afterLogin(profile){
     document.getElementById("title").textContent= profile[2];
     var str= profile[0][0] + " 年 " + profile[0][1] + profile[0][2] + " 班　" + profile[1] + " 號";
     document.getElementById("detail").textContent= str;
+    document.getElementById("money").textContent= "餘額　" + profile[5] + "　元";
+    
 }
