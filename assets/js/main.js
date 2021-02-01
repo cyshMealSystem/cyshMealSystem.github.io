@@ -121,6 +121,8 @@
 				});
 })(jQuery);
 
+document.getElementById("shopping").style.display= "none";
+
 function login(){
     var newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
     var execution= window.setInterval(function(){
@@ -139,5 +141,7 @@ function afterLogin(profile){
     var str= profile[0][0] + " 年 " + profile[0][1] + profile[0][2] + " 班　" + profile[1] + " 號";
     document.getElementById("detail").textContent= str;
     document.getElementById("money").textContent= "餘額　" + profile[5] + "　元";
-    
+    document.getElementById("someBtn").style.display= "none";
+    document.getElementById("shopping").style.display= "block";
 }
+
