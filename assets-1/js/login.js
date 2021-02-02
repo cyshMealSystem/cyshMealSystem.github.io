@@ -51,8 +51,8 @@ function Send(name, IDnumber){
         datatype:'json',
         success: function(respond){
             if(respond=="fail"){
-                alert("您的資料不存在於資料庫\n請先註冊帳戶後再登入");
-                location.href="/register.html";
+                alert("密碼輸入錯誤，請重新填寫");
+                document.getElementById("IDnumber").value="";
             }
             else{
                 alert("登入成功");

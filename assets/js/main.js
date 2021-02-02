@@ -145,3 +145,6 @@ function afterLogin(profile){
     document.getElementById("shopping").style.display= "block";
 }
 
+function settleAccount(){
+    var payment= window.open("/settleAccount.html", "Let'sPay", "config='height=551,width=344");
+}
