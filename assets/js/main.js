@@ -147,14 +147,14 @@ function afterLogin(profile){
     
     setTimeout(function (){
         shoppingStatus= confirm("已經點過餐了嗎???");
-    },1000);
-    if(shoppingStatus){
-        //需先確定點餐至何時
-        var addCommodity= confirm("想要加訂便當嗎???");
-        if( !(addCommodity)){
-            settleAccount();
+        if(shoppingStatus){
+            //需先確定點餐至何時
+            var addCommodity= confirm("想要加訂便當嗎???");
+            if( !(addCommodity)){
+                settleAccount();
+            }
         }
-    }
+    },1000);
 }
 
 function settleAccount(){
