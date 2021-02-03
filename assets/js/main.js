@@ -125,7 +125,7 @@ var shoppingStatus;
 document.getElementById("shopping").style.display= "none";
 
 function login(){
-    var newPage= window.open("login.html", "Let'sLogin", "config='height=551,width=344");
+    var newPage= window.open("login.html", "Let'sLogin", "");
     var execution= window.setInterval(function(){
         if(document.getElementById("activityId").value!=""){
             var profile= document.getElementById("activityId").value;
@@ -151,12 +151,14 @@ function afterLogin(profile){
             //需先確定點餐至何時
             var addCommodity= confirm("想要加訂便當嗎???");
             if( !(addCommodity)){
-                settleAccount();
+                setTimeout(function (){
+                    settleAccount();
+                }, 100);
             }
         }
     },1000);
 }
 
 function settleAccount(){
-    var payment= window.open("/settleAccount.html", "Let'sPay", "config='height=551,width=344");
+    var payment= window.open("/settleAccount.html", "Let'sPay", "");
 }
