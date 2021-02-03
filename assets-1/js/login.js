@@ -12,7 +12,7 @@ function check(status){
     }
 }
 
-function confirm(){
+function Confirm(){
     var name= document.getElementById("Number").value;
     var IDnumber= document.getElementById("IDnumber").value;
     
