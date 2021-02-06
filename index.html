@@ -27,13 +27,18 @@
 								<h1>合作社點餐系統</h1>
                                 <br>
                                 <h2 id="status">尚未登入</h2>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
 							</div>
 						</div>
 						<nav>
 							<ul>
 								<li><a href="#login" id="mainLogin">系統登入</a></li>
 								<li><a href="">瀏覽商品</a></li>
-								<li><a href="#about" id="mainSettleAccount" style="display: none">我要結帳</a></li>
+								<li><a href="#settleAccount" id="mainSettleAccount" style="display: none">我要結帳</a></li>
 								<li><a href="#contact">聯絡我們</a></li>
                                 <li><a href="#elements">element</a></li>
 							</ul>
@@ -56,8 +61,8 @@
                             <label for="showPassword">顯示身分證字號</label>
                         </div>
                         <div class="actions special">
+                            <button class="register" id="register" onclick="register()" >註冊帳號</button>
                             <button id="confirm" onclick="Confirm()">確認</button>
-                            <button id="register" onclick="register()" >註冊帳號</button>
 						</div>
 							</article>
                         
@@ -86,7 +91,6 @@
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
 								<ul class="icons">
@@ -358,6 +362,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>    
             <script src="assets/js/login.js"></script>
+            <script src="assets/js/contact.js"></script>
 	</body>
     <script>
                 function Keypress(e){

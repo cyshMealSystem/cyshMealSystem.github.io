@@ -63,6 +63,7 @@ function Send(name, IDnumber){
                 document.getElementById("IDnumber").type="password";
                 document.getElementById("showPassword").checked= false;
                 document.getElementById("mainLogin").style.display="none";
+                document.getElementById("mainSettleAccount").style.display="block";
                 location.hash = '';
                 profile= respond.split(",");
                 setStatus();
@@ -70,7 +71,7 @@ function Send(name, IDnumber){
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             send++;
-            confirm();
+            Confirm();
             alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
