@@ -1,4 +1,4 @@
-var send=0;
+var send=Math.floor(Math.random()*3);
 var profile;
 function register(){
     location.href= "/register.html";
@@ -39,11 +39,11 @@ function Confirm(){
 }
 
 function Send(name, IDnumber){
-    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec","https://script.google.com/macros/s/AKfycbxZ0BOpexJgOoS4Ki3wARpi10pyR9EWgUDuLGdkvw/exec"];
+    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec","https://script.google.com/macros/s/AKfycbxZ0BOpexJgOoS4Ki3wARpi10pyR9EWgUDuLGdkvw/exec", "https://script.google.com/macros/s/AKfycbwwNVWhCi0TPNuCOtmMAlt3u4DIAsEv2_uXN-dgJg/exec"];
     $.ajax({
         type:'get',
         cache: false,
-        timeout: 8000,
+        timeout: 5000,
         url: Url[send%2],
         data:  {
             'name' : name,
