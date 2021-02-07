@@ -1,5 +1,6 @@
 var send=Math.floor(Math.random()*3);
 var profile;
+console.log(send);
 function register(){
     location.href= "/register.html";
 }
@@ -39,12 +40,12 @@ function Confirm(){
 }
 
 function Send(name, IDnumber){
-    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec","https://script.google.com/macros/s/AKfycbxZ0BOpexJgOoS4Ki3wARpi10pyR9EWgUDuLGdkvw/exec", "https://script.google.com/macros/s/AKfycbwwNVWhCi0TPNuCOtmMAlt3u4DIAsEv2_uXN-dgJg/exec"];
+    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec","https://script.google.com/macros/s/AKfycbxIorsdeoWya2MxK2tTXI1FH52Hv-mXB7cPNys3uBGvBmWjcVUP/exec", "https://script.google.com/macros/s/AKfycbyhJ7HkojoNaII0CTqrVO4Fmmpi4uPSsNJzf4nkNsvHaY5UtxWZ/exec"];
     $.ajax({
         type:'get',
         cache: false,
         timeout: 5000,
-        url: Url[send%2],
+        url: Url[send],
         data:  {
             'name' : name,
             'idnumber': IDnumber
@@ -71,7 +72,7 @@ function Send(name, IDnumber){
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             send++;
-            Confirm();
+            //Confirm();
             alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
