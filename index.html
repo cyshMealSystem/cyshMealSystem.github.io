@@ -55,6 +55,7 @@
 				            <input type="text" name="Number" id="Number" placeholder="請輸入學號" onkeypress="Keypress(event)" />
                             <br>
 				            <input type="password" name="IDnumber" id="IDnumber" placeholder="請輸入身分證字號" onkeypress="Keypress(event)" />
+                            <input type="hidden" id="data"/>
 						</div>
                         <div class="checkboxPassword">
                             <input type="checkbox" id="showPassword" onclick="check(checked)" >
@@ -74,7 +75,6 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -90,9 +90,8 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submit" value="傳送" class="primary" onclick="submit()" /></li>
 									</ul>
-								</form>
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>

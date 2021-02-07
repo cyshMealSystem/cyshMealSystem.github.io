@@ -64,8 +64,8 @@ function Send(name, IDnumber){
                 document.getElementById("showPassword").checked= false;
                 document.getElementById("mainLogin").style.display="none";
                 document.getElementById("mainSettleAccount").style.display="block";
+                document.getElementById("data").value= respond;
                 location.hash = '';
-                profile= respond.split(",");
                 setStatus();
             }
         },
