@@ -1,6 +1,5 @@
 var send=Math.floor(Math.random()*3);
 var profile;
-console.log(send);
 function register(){
     location.href= "/register.html";
 }
