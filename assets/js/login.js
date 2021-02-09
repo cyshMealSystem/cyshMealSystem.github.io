@@ -71,7 +71,7 @@ function Send(name, IDnumber){
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             send++;
-            //Confirm();
+            Confirm();
             alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
