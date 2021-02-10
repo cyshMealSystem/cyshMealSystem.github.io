@@ -62,8 +62,8 @@ function Send(name, IDnumber){
                 document.getElementById("IDnumber").value="";
                 document.getElementById("IDnumber").type="password";
                 document.getElementById("showPassword").checked= false;
-                document.getElementById("mainLogin").style.display="none";
-                document.getElementById("mainSettleAccount").style.display="block";
+                document.getElementById("listLogin").style.display="none";
+                document.getElementById("listSettleAccount").style.display="block";
                 document.getElementById("data").value= respond;
                 location.hash = '';
                 setStatus();
