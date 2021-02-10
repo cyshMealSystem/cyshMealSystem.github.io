@@ -39,7 +39,7 @@ function Confirm(){
 }
 
 function Send(name, IDnumber){
-    var Url=["https://script.google.com/macros/s/AKfycbxzPg5Z5FuVDCKlR1ubd1bTw8xW9qsWMOWkC2coDQMZl9uzbOE/exec","https://script.google.com/macros/s/AKfycbxIorsdeoWya2MxK2tTXI1FH52Hv-mXB7cPNys3uBGvBmWjcVUP/exec", "https://script.google.com/macros/s/AKfycbyhJ7HkojoNaII0CTqrVO4Fmmpi4uPSsNJzf4nkNsvHaY5UtxWZ/exec"];
+    var Url=[ "https://script.google.com/macros/s/AKfycbyAdyKxhbWrM-Gi2tXG9LvtNcRzdJVc6WrnbtrqfVkpeHrErvs7waGU/exec", "https://script.google.com/macros/s/AKfycbzYGrDHbd4lIgmQdtHHGAqWGTJMyzGv33vIoIt_pIXWR7CsOKGlQIHEfQ/exec", "https://script.google.com/macros/s/AKfycbzPa8wVqSnXYRwqHUneMmYolSc6VoPjlll7LQKkOl0y7trYDappRCBZ/exec"];
     $.ajax({
         type:'get',
         cache: false,
