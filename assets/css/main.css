@@ -1677,3 +1677,31 @@ input, select, textarea {
 .fields{
     margin: 0 0 2em 0;
 }
+
+
+/* stores */
+#stores .card div{
+	padding: 20px;
+}
+
+#stores .card .block div{
+	display: inline-block;
+}
+#stores .card img{
+	width: 100%;
+}
+#stores .card .block h2{
+	float: left;
+}
+
+#stores .card .block button{
+	float: right;
+}
+
+.product img{
+	width: 100%;
+}
+.product div{
+	padding: 20px;
+}
+
