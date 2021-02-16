@@ -1,5 +1,8 @@
 var send=Math.floor(Math.random()*3);
 var profile;
+
+    var Url=[ "https://script.google.com/macros/s/AKfycbyAdyKxhbWrM-Gi2tXG9LvtNcRzdJVc6WrnbtrqfVkpeHrErvs7waGU/exec", "https://script.google.com/macros/s/AKfycbzYGrDHbd4lIgmQdtHHGAqWGTJMyzGv33vIoIt_pIXWR7CsOKGlQIHEfQ/exec", "https://script.google.com/macros/s/AKfycbzPa8wVqSnXYRwqHUneMmYolSc6VoPjlll7LQKkOl0y7trYDappRCBZ/exec"];
+
 function register(){
     location.href= "/register.html";
 }
@@ -13,7 +16,7 @@ function check(status){
     }
 }
 
-function Confirm(){
+function loginConfirm(){
     var name= document.getElementById("Number").value;
     var IDnumber= document.getElementById("IDnumber").value;
     
@@ -39,7 +42,6 @@ function Confirm(){
 }
 
 function Send(name, IDnumber){
-    var Url=[ "https://script.google.com/macros/s/AKfycbyAdyKxhbWrM-Gi2tXG9LvtNcRzdJVc6WrnbtrqfVkpeHrErvs7waGU/exec", "https://script.google.com/macros/s/AKfycbzYGrDHbd4lIgmQdtHHGAqWGTJMyzGv33vIoIt_pIXWR7CsOKGlQIHEfQ/exec", "https://script.google.com/macros/s/AKfycbzPa8wVqSnXYRwqHUneMmYolSc6VoPjlll7LQKkOl0y7trYDappRCBZ/exec"];
     $.ajax({
         type:'get',
         cache: false,
@@ -71,7 +73,7 @@ function Send(name, IDnumber){
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             send++;
-            Confirm();
+            loginloginConfirm();
             alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
