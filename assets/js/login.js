@@ -1,18 +1,18 @@
 var send=Math.floor(Math.random()*3);
 var profile;
-
+var toLogin=0;
     var Url=[ "https://script.google.com/macros/s/AKfycbyAdyKxhbWrM-Gi2tXG9LvtNcRzdJVc6WrnbtrqfVkpeHrErvs7waGU/exec", "https://script.google.com/macros/s/AKfycbzYGrDHbd4lIgmQdtHHGAqWGTJMyzGv33vIoIt_pIXWR7CsOKGlQIHEfQ/exec", "https://script.google.com/macros/s/AKfycbzPa8wVqSnXYRwqHUneMmYolSc6VoPjlll7LQKkOl0y7trYDappRCBZ/exec"];
 
 function register(){
     location.href= "/register.html";
 }
 
-function check(status){
+function password(status){
     if(status){
-        document.getElementById("IDnumber").type= "text";
+        IDnumber.type= "text";
     }
     else{
-        document.getElementById("IDnumber").type= "password";
+        IDnumber.type= "password";
     }
 }
 
@@ -60,20 +60,15 @@ function Send(name, IDnumber){
             }
             else{
                 alert("登入成功");
-                document.getElementById("Number").value="";
-                document.getElementById("IDnumber").value="";
-                document.getElementById("IDnumber").type="password";
-                document.getElementById("showPassword").checked= false;
-                document.getElementById("listLogin").style.display="none";
-                document.getElementById("listSettleAccount").style.display="block";
-                document.getElementById("data").value= respond;
-                location.hash = '';
+                indexBtn1.innerHTML= '<a href="#stores">瀏覽商品</a>';
+                indexBtn2.innerHTML= '<a href="#settleAccount" id="mainSettleAccount">我要結帳</a>';
+                data.value= respond;
                 setStatus();
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             send++;
-            loginloginConfirm();
+            loginConfirm();
             alert("登入逾時\n將自動幫您重新傳送資料");
         }
     });
@@ -81,5 +76,12 @@ function Send(name, IDnumber){
 
 function setStatus(){
     document.getElementById("status").textContent="歡迎使用本系統";
-    
+    setTimeout( function (){
+    if(toLogin==0)            //login straightly
+        location.hash= '';
+    else if(toLogin==1)     //browsed commodity then login yet haven't selected
+        location.hash= 'stores';
+    else                            //browsed commodity then login and have selected
+        location.hash= 'settleAccount';
+    }, 500);
 }

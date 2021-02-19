@@ -47,10 +47,8 @@ for(let i = 0;i < slideData.length;i++){
 	button.addEventListener("click", ()=>{
 		window.location.href=`${slideData[i].store}`;
 		if(slideData[i].store === '#cash')
-			for(let i = 0;i<4;i++)
-				for(let j = 0;j<size[i];j++)
-					console.log(`第${i+1}間商店的第${j+1}個商品有${product[i][j].amount}件`);
-
+            checkStatus();
+            //console.log(`第${i+1}間商店的第${j+1}個商品有${product[i][j].amount}件`);
 	});
 	block.appendChild(head);
 	block.appendChild(button);
