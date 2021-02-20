@@ -23,15 +23,9 @@
 							<span class="icon fa-gem"></span>
 						</div>
 						<div class="content">
-							<div class="inner">
+							<div class="inner" id="inner">
 								<h1>合作社點餐系統</h1>
-                                <br>
                                 <h2 id="status">尚未登入</h2>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
 							</div>
 						</div>
 						<nav>
@@ -60,14 +54,24 @@
                             <label for="showPassword">顯示身分證字號</label>
                         </div>
                         <div class="actions special">
-                            <button class="register" id="register" onclick="register()" >註冊帳號</button>
-                            <button id="loginConfirm" onclick="loginConfirm()">確認</button>
+                            <button class="leftBtn" id="register" onclick="register()" >註冊帳號</button>
+                            <button class="rightBtn" id="loginConfirm" onclick="loginConfirm()">確認</button>
 						</div>
 							</article>
                         
 						<!-- settleAccount -->
 							<article id="settleAccount">
 								<h2 class="major">結帳</h2>
+                                <div class="itemList" id="commodity"></div>
+                                <div class="actions">
+                                    <div class="moneyArea">
+                                        <h3 id="remainder"></h3>
+                                    </div>
+                                </div>
+                                <div class="actions special">
+                                    <button class="leftBtn" id="browseAgain" onclick="browseAgain()">繼續瀏覽商品</button>
+                                    <button class="rightBtn" id="toPay" onclick="toPay()">付款</button>
+                                </div>
 							</article>
 						
 						<!-- Stores -->
