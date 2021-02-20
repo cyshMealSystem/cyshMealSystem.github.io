@@ -1669,8 +1669,13 @@ input, select, textarea {
     margin: 0 0 1em 0;
 }
 
-.register{
+.leftBtn{
     margin: 0 0.5em 0 0;
+    background-color: #8fbc8f;
+}
+
+.rightBtn{
+    background-color: #5f9ea0;
 }
 
 .fields{
@@ -1704,3 +1709,7 @@ input, select, textarea {
 	padding: 20px;
 }
 
+.moneyArea{
+    margin: 1rem 0 0 0;
+    text-align: right;
+}
